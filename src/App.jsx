@@ -4,8 +4,8 @@ import SignIn from './assets/pages/SignIn';
 import SignUp from './assets/pages/SignUp';
 import About from './assets/pages/About';
 import Profile from './assets/pages/Profile';
-/*
 import Header from './components/Header';
+/*
 import PrivateRoute from './components/PrivateRoute';
 import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/UpdateListing';
@@ -13,7 +13,9 @@ import Listing from './pages/Listing';
 import Search from './pages/Search';
 */
 export default function App() {
-  return <BrowserRouter>
+  return (
+    <BrowserRouter>
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sign-in' element={<SignIn />} />
@@ -21,5 +23,6 @@ export default function App() {
         <Route path='/about' element={<About />} />
         <Route path='/profile' element={<Profile />} />
       </Routes>
-    </BrowserRouter>;
+    </BrowserRouter>
+  );
 }
